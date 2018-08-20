@@ -70,11 +70,12 @@ result := s.GetSlice() // returns a *[]string containing {"my", "string", "slice
 
 ## Build
 
-This package is generated using [genny](https://github.com/cheekybits/genny). You can simple run `go generate` or `make generate`
+This package is generated using [genny](https://github.com/cheekybits/genny). You can simply run `go generate` or `make generate` to build project.
+
 
 ## Ideas || Issues
 
-Just fill an issue and describe it. I'll check it ASAP!
+Just create an issue and describe it. I'll check it ASAP!
 
 
 ## Contribution
