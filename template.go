@@ -69,10 +69,11 @@ func (s *SliceOfSomething) Push(item Something) *SliceOfSomething {
 	return s
 }
 
-// Pop deletes the Something item from the end of the slice
-func (s *SliceOfSomething) Pop() *SliceOfSomething {
+// Pop deletes the Something item from the end of the slice and returns it
+func (s *SliceOfSomething) Pop() Something {
+	poppedItem := s.items[len(s.items)-1]
 	s.items = s.items[:len(s.items)-1]
-	return s
+	return poppedItem
 }
 
 // Every gets a checker function and runs that on every single Something items and returns true if the function returne true for all of the them

@@ -64,10 +64,11 @@ func (s *SliceOfByte) Push(item byte) *SliceOfByte {
 	return s
 }
 
-// Pop deletes the byte item from the end of the slice
-func (s *SliceOfByte) Pop() *SliceOfByte {
+// Pop deletes the byte item from the end of the slice and returns it
+func (s *SliceOfByte) Pop() byte {
+	poppedItem := s.items[len(s.items)-1]
 	s.items = s.items[:len(s.items)-1]
-	return s
+	return poppedItem
 }
 
 // Every gets a checker function and runs that on every single byte items and returns true if the function returne true for all of the them
@@ -170,10 +171,11 @@ func (s *SliceOfInt) Push(item int) *SliceOfInt {
 	return s
 }
 
-// Pop deletes the int item from the end of the slice
-func (s *SliceOfInt) Pop() *SliceOfInt {
+// Pop deletes the int item from the end of the slice and returns it
+func (s *SliceOfInt) Pop() int {
+	poppedItem := s.items[len(s.items)-1]
 	s.items = s.items[:len(s.items)-1]
-	return s
+	return poppedItem
 }
 
 // Every gets a checker function and runs that on every single int items and returns true if the function returne true for all of the them
@@ -276,10 +278,11 @@ func (s *SliceOfInt8) Push(item int8) *SliceOfInt8 {
 	return s
 }
 
-// Pop deletes the int8 item from the end of the slice
-func (s *SliceOfInt8) Pop() *SliceOfInt8 {
+// Pop deletes the int8 item from the end of the slice and returns it
+func (s *SliceOfInt8) Pop() int8 {
+	poppedItem := s.items[len(s.items)-1]
 	s.items = s.items[:len(s.items)-1]
-	return s
+	return poppedItem
 }
 
 // Every gets a checker function and runs that on every single int8 items and returns true if the function returne true for all of the them
@@ -382,10 +385,11 @@ func (s *SliceOfInt16) Push(item int16) *SliceOfInt16 {
 	return s
 }
 
-// Pop deletes the int16 item from the end of the slice
-func (s *SliceOfInt16) Pop() *SliceOfInt16 {
+// Pop deletes the int16 item from the end of the slice and returns it
+func (s *SliceOfInt16) Pop() int16 {
+	poppedItem := s.items[len(s.items)-1]
 	s.items = s.items[:len(s.items)-1]
-	return s
+	return poppedItem
 }
 
 // Every gets a checker function and runs that on every single int16 items and returns true if the function returne true for all of the them
@@ -488,10 +492,11 @@ func (s *SliceOfInt32) Push(item int32) *SliceOfInt32 {
 	return s
 }
 
-// Pop deletes the int32 item from the end of the slice
-func (s *SliceOfInt32) Pop() *SliceOfInt32 {
+// Pop deletes the int32 item from the end of the slice and returns it
+func (s *SliceOfInt32) Pop() int32 {
+	poppedItem := s.items[len(s.items)-1]
 	s.items = s.items[:len(s.items)-1]
-	return s
+	return poppedItem
 }
 
 // Every gets a checker function and runs that on every single int32 items and returns true if the function returne true for all of the them
@@ -594,10 +599,11 @@ func (s *SliceOfInt64) Push(item int64) *SliceOfInt64 {
 	return s
 }
 
-// Pop deletes the int64 item from the end of the slice
-func (s *SliceOfInt64) Pop() *SliceOfInt64 {
+// Pop deletes the int64 item from the end of the slice and returns it
+func (s *SliceOfInt64) Pop() int64 {
+	poppedItem := s.items[len(s.items)-1]
 	s.items = s.items[:len(s.items)-1]
-	return s
+	return poppedItem
 }
 
 // Every gets a checker function and runs that on every single int64 items and returns true if the function returne true for all of the them
@@ -700,10 +706,11 @@ func (s *SliceOfFloat32) Push(item float32) *SliceOfFloat32 {
 	return s
 }
 
-// Pop deletes the float32 item from the end of the slice
-func (s *SliceOfFloat32) Pop() *SliceOfFloat32 {
+// Pop deletes the float32 item from the end of the slice and returns it
+func (s *SliceOfFloat32) Pop() float32 {
+	poppedItem := s.items[len(s.items)-1]
 	s.items = s.items[:len(s.items)-1]
-	return s
+	return poppedItem
 }
 
 // Every gets a checker function and runs that on every single float32 items and returns true if the function returne true for all of the them
@@ -806,10 +813,11 @@ func (s *SliceOfFloat64) Push(item float64) *SliceOfFloat64 {
 	return s
 }
 
-// Pop deletes the float64 item from the end of the slice
-func (s *SliceOfFloat64) Pop() *SliceOfFloat64 {
+// Pop deletes the float64 item from the end of the slice and returns it
+func (s *SliceOfFloat64) Pop() float64 {
+	poppedItem := s.items[len(s.items)-1]
 	s.items = s.items[:len(s.items)-1]
-	return s
+	return poppedItem
 }
 
 // Every gets a checker function and runs that on every single float64 items and returns true if the function returne true for all of the them
@@ -912,10 +920,11 @@ func (s *SliceOfUint) Push(item uint) *SliceOfUint {
 	return s
 }
 
-// Pop deletes the uint item from the end of the slice
-func (s *SliceOfUint) Pop() *SliceOfUint {
+// Pop deletes the uint item from the end of the slice and returns it
+func (s *SliceOfUint) Pop() uint {
+	poppedItem := s.items[len(s.items)-1]
 	s.items = s.items[:len(s.items)-1]
-	return s
+	return poppedItem
 }
 
 // Every gets a checker function and runs that on every single uint items and returns true if the function returne true for all of the them
@@ -1018,10 +1027,11 @@ func (s *SliceOfUint8) Push(item uint8) *SliceOfUint8 {
 	return s
 }
 
-// Pop deletes the uint8 item from the end of the slice
-func (s *SliceOfUint8) Pop() *SliceOfUint8 {
+// Pop deletes the uint8 item from the end of the slice and returns it
+func (s *SliceOfUint8) Pop() uint8 {
+	poppedItem := s.items[len(s.items)-1]
 	s.items = s.items[:len(s.items)-1]
-	return s
+	return poppedItem
 }
 
 // Every gets a checker function and runs that on every single uint8 items and returns true if the function returne true for all of the them
@@ -1124,10 +1134,11 @@ func (s *SliceOfUint16) Push(item uint16) *SliceOfUint16 {
 	return s
 }
 
-// Pop deletes the uint16 item from the end of the slice
-func (s *SliceOfUint16) Pop() *SliceOfUint16 {
+// Pop deletes the uint16 item from the end of the slice and returns it
+func (s *SliceOfUint16) Pop() uint16 {
+	poppedItem := s.items[len(s.items)-1]
 	s.items = s.items[:len(s.items)-1]
-	return s
+	return poppedItem
 }
 
 // Every gets a checker function and runs that on every single uint16 items and returns true if the function returne true for all of the them
@@ -1230,10 +1241,11 @@ func (s *SliceOfUint32) Push(item uint32) *SliceOfUint32 {
 	return s
 }
 
-// Pop deletes the uint32 item from the end of the slice
-func (s *SliceOfUint32) Pop() *SliceOfUint32 {
+// Pop deletes the uint32 item from the end of the slice and returns it
+func (s *SliceOfUint32) Pop() uint32 {
+	poppedItem := s.items[len(s.items)-1]
 	s.items = s.items[:len(s.items)-1]
-	return s
+	return poppedItem
 }
 
 // Every gets a checker function and runs that on every single uint32 items and returns true if the function returne true for all of the them
@@ -1336,10 +1348,11 @@ func (s *SliceOfUint64) Push(item uint64) *SliceOfUint64 {
 	return s
 }
 
-// Pop deletes the uint64 item from the end of the slice
-func (s *SliceOfUint64) Pop() *SliceOfUint64 {
+// Pop deletes the uint64 item from the end of the slice and returns it
+func (s *SliceOfUint64) Pop() uint64 {
+	poppedItem := s.items[len(s.items)-1]
 	s.items = s.items[:len(s.items)-1]
-	return s
+	return poppedItem
 }
 
 // Every gets a checker function and runs that on every single uint64 items and returns true if the function returne true for all of the them
@@ -1442,10 +1455,11 @@ func (s *SliceOfString) Push(item string) *SliceOfString {
 	return s
 }
 
-// Pop deletes the string item from the end of the slice
-func (s *SliceOfString) Pop() *SliceOfString {
+// Pop deletes the string item from the end of the slice and returns it
+func (s *SliceOfString) Pop() string {
+	poppedItem := s.items[len(s.items)-1]
 	s.items = s.items[:len(s.items)-1]
-	return s
+	return poppedItem
 }
 
 // Every gets a checker function and runs that on every single string items and returns true if the function returne true for all of the them
@@ -1548,10 +1562,11 @@ func (s *SliceOfInterface) Push(item interface{}) *SliceOfInterface {
 	return s
 }
 
-// Pop deletes the interface{} item from the end of the slice
-func (s *SliceOfInterface) Pop() *SliceOfInterface {
+// Pop deletes the interface{} item from the end of the slice and returns it
+func (s *SliceOfInterface) Pop() interface{} {
+	poppedItem := s.items[len(s.items)-1]
 	s.items = s.items[:len(s.items)-1]
-	return s
+	return poppedItem
 }
 
 // Every gets a checker function and runs that on every single interface{} items and returns true if the function returne true for all of the them
