@@ -39,18 +39,6 @@ func (s *SliceOfSomething) Map(mapFunc func(Something) Something) *SliceOfSometh
 	return s
 }
 
-// Push pushes the Something item at the end of the slice
-func (s *SliceOfSomething) Push(item Something) *SliceOfSomething {
-	s.items = append(s.items, item)
-	return s
-}
-
-// Pop deletes the Something item from the end of the slice
-func (s *SliceOfSomething) Pop() *SliceOfSomething {
-	s.items = s.items[:len(s.items)-2]
-	return s
-}
-
 // Shift removes first Something item from the slice
 func (s *SliceOfSomething) Shift() *SliceOfSomething {
 	s.items = s.items[1:]
@@ -72,6 +60,18 @@ func (s *SliceOfSomething) Append(item Something) *SliceOfSomething {
 // Concat concats another slice and adds the items in that to the end of current slice
 func (s *SliceOfSomething) Concat(items []Something) *SliceOfSomething {
 	s.items = append(s.items, items...)
+	return s
+}
+
+// Push pushes the Something item at the end of the slice
+func (s *SliceOfSomething) Push(item Something) *SliceOfSomething {
+	s.items = append(s.items, item)
+	return s
+}
+
+// Pop deletes the Something item from the end of the slice
+func (s *SliceOfSomething) Pop() *SliceOfSomething {
+	s.items = s.items[:len(s.items)-1]
 	return s
 }
 

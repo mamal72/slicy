@@ -34,18 +34,6 @@ func (s *SliceOfByte) Map(mapFunc func(byte) byte) *SliceOfByte {
 	return s
 }
 
-// Push pushes the byte item at the end of the slice
-func (s *SliceOfByte) Push(item byte) *SliceOfByte {
-	s.items = append(s.items, item)
-	return s
-}
-
-// Pop deletes the byte item from the end of the slice
-func (s *SliceOfByte) Pop() *SliceOfByte {
-	s.items = s.items[:len(s.items)-2]
-	return s
-}
-
 // Shift removes first byte item from the slice
 func (s *SliceOfByte) Shift() *SliceOfByte {
 	s.items = s.items[1:]
@@ -67,6 +55,18 @@ func (s *SliceOfByte) Append(item byte) *SliceOfByte {
 // Concat concats another slice and adds the items in that to the end of current slice
 func (s *SliceOfByte) Concat(items []byte) *SliceOfByte {
 	s.items = append(s.items, items...)
+	return s
+}
+
+// Push pushes the byte item at the end of the slice
+func (s *SliceOfByte) Push(item byte) *SliceOfByte {
+	s.items = append(s.items, item)
+	return s
+}
+
+// Pop deletes the byte item from the end of the slice
+func (s *SliceOfByte) Pop() *SliceOfByte {
+	s.items = s.items[:len(s.items)-1]
 	return s
 }
 
@@ -140,18 +140,6 @@ func (s *SliceOfInt) Map(mapFunc func(int) int) *SliceOfInt {
 	return s
 }
 
-// Push pushes the int item at the end of the slice
-func (s *SliceOfInt) Push(item int) *SliceOfInt {
-	s.items = append(s.items, item)
-	return s
-}
-
-// Pop deletes the int item from the end of the slice
-func (s *SliceOfInt) Pop() *SliceOfInt {
-	s.items = s.items[:len(s.items)-2]
-	return s
-}
-
 // Shift removes first int item from the slice
 func (s *SliceOfInt) Shift() *SliceOfInt {
 	s.items = s.items[1:]
@@ -173,6 +161,18 @@ func (s *SliceOfInt) Append(item int) *SliceOfInt {
 // Concat concats another slice and adds the items in that to the end of current slice
 func (s *SliceOfInt) Concat(items []int) *SliceOfInt {
 	s.items = append(s.items, items...)
+	return s
+}
+
+// Push pushes the int item at the end of the slice
+func (s *SliceOfInt) Push(item int) *SliceOfInt {
+	s.items = append(s.items, item)
+	return s
+}
+
+// Pop deletes the int item from the end of the slice
+func (s *SliceOfInt) Pop() *SliceOfInt {
+	s.items = s.items[:len(s.items)-1]
 	return s
 }
 
@@ -246,18 +246,6 @@ func (s *SliceOfInt8) Map(mapFunc func(int8) int8) *SliceOfInt8 {
 	return s
 }
 
-// Push pushes the int8 item at the end of the slice
-func (s *SliceOfInt8) Push(item int8) *SliceOfInt8 {
-	s.items = append(s.items, item)
-	return s
-}
-
-// Pop deletes the int8 item from the end of the slice
-func (s *SliceOfInt8) Pop() *SliceOfInt8 {
-	s.items = s.items[:len(s.items)-2]
-	return s
-}
-
 // Shift removes first int8 item from the slice
 func (s *SliceOfInt8) Shift() *SliceOfInt8 {
 	s.items = s.items[1:]
@@ -279,6 +267,18 @@ func (s *SliceOfInt8) Append(item int8) *SliceOfInt8 {
 // Concat concats another slice and adds the items in that to the end of current slice
 func (s *SliceOfInt8) Concat(items []int8) *SliceOfInt8 {
 	s.items = append(s.items, items...)
+	return s
+}
+
+// Push pushes the int8 item at the end of the slice
+func (s *SliceOfInt8) Push(item int8) *SliceOfInt8 {
+	s.items = append(s.items, item)
+	return s
+}
+
+// Pop deletes the int8 item from the end of the slice
+func (s *SliceOfInt8) Pop() *SliceOfInt8 {
+	s.items = s.items[:len(s.items)-1]
 	return s
 }
 
@@ -352,18 +352,6 @@ func (s *SliceOfInt16) Map(mapFunc func(int16) int16) *SliceOfInt16 {
 	return s
 }
 
-// Push pushes the int16 item at the end of the slice
-func (s *SliceOfInt16) Push(item int16) *SliceOfInt16 {
-	s.items = append(s.items, item)
-	return s
-}
-
-// Pop deletes the int16 item from the end of the slice
-func (s *SliceOfInt16) Pop() *SliceOfInt16 {
-	s.items = s.items[:len(s.items)-2]
-	return s
-}
-
 // Shift removes first int16 item from the slice
 func (s *SliceOfInt16) Shift() *SliceOfInt16 {
 	s.items = s.items[1:]
@@ -385,6 +373,18 @@ func (s *SliceOfInt16) Append(item int16) *SliceOfInt16 {
 // Concat concats another slice and adds the items in that to the end of current slice
 func (s *SliceOfInt16) Concat(items []int16) *SliceOfInt16 {
 	s.items = append(s.items, items...)
+	return s
+}
+
+// Push pushes the int16 item at the end of the slice
+func (s *SliceOfInt16) Push(item int16) *SliceOfInt16 {
+	s.items = append(s.items, item)
+	return s
+}
+
+// Pop deletes the int16 item from the end of the slice
+func (s *SliceOfInt16) Pop() *SliceOfInt16 {
+	s.items = s.items[:len(s.items)-1]
 	return s
 }
 
@@ -458,18 +458,6 @@ func (s *SliceOfInt32) Map(mapFunc func(int32) int32) *SliceOfInt32 {
 	return s
 }
 
-// Push pushes the int32 item at the end of the slice
-func (s *SliceOfInt32) Push(item int32) *SliceOfInt32 {
-	s.items = append(s.items, item)
-	return s
-}
-
-// Pop deletes the int32 item from the end of the slice
-func (s *SliceOfInt32) Pop() *SliceOfInt32 {
-	s.items = s.items[:len(s.items)-2]
-	return s
-}
-
 // Shift removes first int32 item from the slice
 func (s *SliceOfInt32) Shift() *SliceOfInt32 {
 	s.items = s.items[1:]
@@ -491,6 +479,18 @@ func (s *SliceOfInt32) Append(item int32) *SliceOfInt32 {
 // Concat concats another slice and adds the items in that to the end of current slice
 func (s *SliceOfInt32) Concat(items []int32) *SliceOfInt32 {
 	s.items = append(s.items, items...)
+	return s
+}
+
+// Push pushes the int32 item at the end of the slice
+func (s *SliceOfInt32) Push(item int32) *SliceOfInt32 {
+	s.items = append(s.items, item)
+	return s
+}
+
+// Pop deletes the int32 item from the end of the slice
+func (s *SliceOfInt32) Pop() *SliceOfInt32 {
+	s.items = s.items[:len(s.items)-1]
 	return s
 }
 
@@ -564,18 +564,6 @@ func (s *SliceOfInt64) Map(mapFunc func(int64) int64) *SliceOfInt64 {
 	return s
 }
 
-// Push pushes the int64 item at the end of the slice
-func (s *SliceOfInt64) Push(item int64) *SliceOfInt64 {
-	s.items = append(s.items, item)
-	return s
-}
-
-// Pop deletes the int64 item from the end of the slice
-func (s *SliceOfInt64) Pop() *SliceOfInt64 {
-	s.items = s.items[:len(s.items)-2]
-	return s
-}
-
 // Shift removes first int64 item from the slice
 func (s *SliceOfInt64) Shift() *SliceOfInt64 {
 	s.items = s.items[1:]
@@ -597,6 +585,18 @@ func (s *SliceOfInt64) Append(item int64) *SliceOfInt64 {
 // Concat concats another slice and adds the items in that to the end of current slice
 func (s *SliceOfInt64) Concat(items []int64) *SliceOfInt64 {
 	s.items = append(s.items, items...)
+	return s
+}
+
+// Push pushes the int64 item at the end of the slice
+func (s *SliceOfInt64) Push(item int64) *SliceOfInt64 {
+	s.items = append(s.items, item)
+	return s
+}
+
+// Pop deletes the int64 item from the end of the slice
+func (s *SliceOfInt64) Pop() *SliceOfInt64 {
+	s.items = s.items[:len(s.items)-1]
 	return s
 }
 
@@ -670,18 +670,6 @@ func (s *SliceOfFloat32) Map(mapFunc func(float32) float32) *SliceOfFloat32 {
 	return s
 }
 
-// Push pushes the float32 item at the end of the slice
-func (s *SliceOfFloat32) Push(item float32) *SliceOfFloat32 {
-	s.items = append(s.items, item)
-	return s
-}
-
-// Pop deletes the float32 item from the end of the slice
-func (s *SliceOfFloat32) Pop() *SliceOfFloat32 {
-	s.items = s.items[:len(s.items)-2]
-	return s
-}
-
 // Shift removes first float32 item from the slice
 func (s *SliceOfFloat32) Shift() *SliceOfFloat32 {
 	s.items = s.items[1:]
@@ -703,6 +691,18 @@ func (s *SliceOfFloat32) Append(item float32) *SliceOfFloat32 {
 // Concat concats another slice and adds the items in that to the end of current slice
 func (s *SliceOfFloat32) Concat(items []float32) *SliceOfFloat32 {
 	s.items = append(s.items, items...)
+	return s
+}
+
+// Push pushes the float32 item at the end of the slice
+func (s *SliceOfFloat32) Push(item float32) *SliceOfFloat32 {
+	s.items = append(s.items, item)
+	return s
+}
+
+// Pop deletes the float32 item from the end of the slice
+func (s *SliceOfFloat32) Pop() *SliceOfFloat32 {
+	s.items = s.items[:len(s.items)-1]
 	return s
 }
 
@@ -776,18 +776,6 @@ func (s *SliceOfFloat64) Map(mapFunc func(float64) float64) *SliceOfFloat64 {
 	return s
 }
 
-// Push pushes the float64 item at the end of the slice
-func (s *SliceOfFloat64) Push(item float64) *SliceOfFloat64 {
-	s.items = append(s.items, item)
-	return s
-}
-
-// Pop deletes the float64 item from the end of the slice
-func (s *SliceOfFloat64) Pop() *SliceOfFloat64 {
-	s.items = s.items[:len(s.items)-2]
-	return s
-}
-
 // Shift removes first float64 item from the slice
 func (s *SliceOfFloat64) Shift() *SliceOfFloat64 {
 	s.items = s.items[1:]
@@ -809,6 +797,18 @@ func (s *SliceOfFloat64) Append(item float64) *SliceOfFloat64 {
 // Concat concats another slice and adds the items in that to the end of current slice
 func (s *SliceOfFloat64) Concat(items []float64) *SliceOfFloat64 {
 	s.items = append(s.items, items...)
+	return s
+}
+
+// Push pushes the float64 item at the end of the slice
+func (s *SliceOfFloat64) Push(item float64) *SliceOfFloat64 {
+	s.items = append(s.items, item)
+	return s
+}
+
+// Pop deletes the float64 item from the end of the slice
+func (s *SliceOfFloat64) Pop() *SliceOfFloat64 {
+	s.items = s.items[:len(s.items)-1]
 	return s
 }
 
@@ -882,18 +882,6 @@ func (s *SliceOfUint) Map(mapFunc func(uint) uint) *SliceOfUint {
 	return s
 }
 
-// Push pushes the uint item at the end of the slice
-func (s *SliceOfUint) Push(item uint) *SliceOfUint {
-	s.items = append(s.items, item)
-	return s
-}
-
-// Pop deletes the uint item from the end of the slice
-func (s *SliceOfUint) Pop() *SliceOfUint {
-	s.items = s.items[:len(s.items)-2]
-	return s
-}
-
 // Shift removes first uint item from the slice
 func (s *SliceOfUint) Shift() *SliceOfUint {
 	s.items = s.items[1:]
@@ -915,6 +903,18 @@ func (s *SliceOfUint) Append(item uint) *SliceOfUint {
 // Concat concats another slice and adds the items in that to the end of current slice
 func (s *SliceOfUint) Concat(items []uint) *SliceOfUint {
 	s.items = append(s.items, items...)
+	return s
+}
+
+// Push pushes the uint item at the end of the slice
+func (s *SliceOfUint) Push(item uint) *SliceOfUint {
+	s.items = append(s.items, item)
+	return s
+}
+
+// Pop deletes the uint item from the end of the slice
+func (s *SliceOfUint) Pop() *SliceOfUint {
+	s.items = s.items[:len(s.items)-1]
 	return s
 }
 
@@ -988,18 +988,6 @@ func (s *SliceOfUint8) Map(mapFunc func(uint8) uint8) *SliceOfUint8 {
 	return s
 }
 
-// Push pushes the uint8 item at the end of the slice
-func (s *SliceOfUint8) Push(item uint8) *SliceOfUint8 {
-	s.items = append(s.items, item)
-	return s
-}
-
-// Pop deletes the uint8 item from the end of the slice
-func (s *SliceOfUint8) Pop() *SliceOfUint8 {
-	s.items = s.items[:len(s.items)-2]
-	return s
-}
-
 // Shift removes first uint8 item from the slice
 func (s *SliceOfUint8) Shift() *SliceOfUint8 {
 	s.items = s.items[1:]
@@ -1021,6 +1009,18 @@ func (s *SliceOfUint8) Append(item uint8) *SliceOfUint8 {
 // Concat concats another slice and adds the items in that to the end of current slice
 func (s *SliceOfUint8) Concat(items []uint8) *SliceOfUint8 {
 	s.items = append(s.items, items...)
+	return s
+}
+
+// Push pushes the uint8 item at the end of the slice
+func (s *SliceOfUint8) Push(item uint8) *SliceOfUint8 {
+	s.items = append(s.items, item)
+	return s
+}
+
+// Pop deletes the uint8 item from the end of the slice
+func (s *SliceOfUint8) Pop() *SliceOfUint8 {
+	s.items = s.items[:len(s.items)-1]
 	return s
 }
 
@@ -1094,18 +1094,6 @@ func (s *SliceOfUint16) Map(mapFunc func(uint16) uint16) *SliceOfUint16 {
 	return s
 }
 
-// Push pushes the uint16 item at the end of the slice
-func (s *SliceOfUint16) Push(item uint16) *SliceOfUint16 {
-	s.items = append(s.items, item)
-	return s
-}
-
-// Pop deletes the uint16 item from the end of the slice
-func (s *SliceOfUint16) Pop() *SliceOfUint16 {
-	s.items = s.items[:len(s.items)-2]
-	return s
-}
-
 // Shift removes first uint16 item from the slice
 func (s *SliceOfUint16) Shift() *SliceOfUint16 {
 	s.items = s.items[1:]
@@ -1127,6 +1115,18 @@ func (s *SliceOfUint16) Append(item uint16) *SliceOfUint16 {
 // Concat concats another slice and adds the items in that to the end of current slice
 func (s *SliceOfUint16) Concat(items []uint16) *SliceOfUint16 {
 	s.items = append(s.items, items...)
+	return s
+}
+
+// Push pushes the uint16 item at the end of the slice
+func (s *SliceOfUint16) Push(item uint16) *SliceOfUint16 {
+	s.items = append(s.items, item)
+	return s
+}
+
+// Pop deletes the uint16 item from the end of the slice
+func (s *SliceOfUint16) Pop() *SliceOfUint16 {
+	s.items = s.items[:len(s.items)-1]
 	return s
 }
 
@@ -1200,18 +1200,6 @@ func (s *SliceOfUint32) Map(mapFunc func(uint32) uint32) *SliceOfUint32 {
 	return s
 }
 
-// Push pushes the uint32 item at the end of the slice
-func (s *SliceOfUint32) Push(item uint32) *SliceOfUint32 {
-	s.items = append(s.items, item)
-	return s
-}
-
-// Pop deletes the uint32 item from the end of the slice
-func (s *SliceOfUint32) Pop() *SliceOfUint32 {
-	s.items = s.items[:len(s.items)-2]
-	return s
-}
-
 // Shift removes first uint32 item from the slice
 func (s *SliceOfUint32) Shift() *SliceOfUint32 {
 	s.items = s.items[1:]
@@ -1233,6 +1221,18 @@ func (s *SliceOfUint32) Append(item uint32) *SliceOfUint32 {
 // Concat concats another slice and adds the items in that to the end of current slice
 func (s *SliceOfUint32) Concat(items []uint32) *SliceOfUint32 {
 	s.items = append(s.items, items...)
+	return s
+}
+
+// Push pushes the uint32 item at the end of the slice
+func (s *SliceOfUint32) Push(item uint32) *SliceOfUint32 {
+	s.items = append(s.items, item)
+	return s
+}
+
+// Pop deletes the uint32 item from the end of the slice
+func (s *SliceOfUint32) Pop() *SliceOfUint32 {
+	s.items = s.items[:len(s.items)-1]
 	return s
 }
 
@@ -1306,18 +1306,6 @@ func (s *SliceOfUint64) Map(mapFunc func(uint64) uint64) *SliceOfUint64 {
 	return s
 }
 
-// Push pushes the uint64 item at the end of the slice
-func (s *SliceOfUint64) Push(item uint64) *SliceOfUint64 {
-	s.items = append(s.items, item)
-	return s
-}
-
-// Pop deletes the uint64 item from the end of the slice
-func (s *SliceOfUint64) Pop() *SliceOfUint64 {
-	s.items = s.items[:len(s.items)-2]
-	return s
-}
-
 // Shift removes first uint64 item from the slice
 func (s *SliceOfUint64) Shift() *SliceOfUint64 {
 	s.items = s.items[1:]
@@ -1339,6 +1327,18 @@ func (s *SliceOfUint64) Append(item uint64) *SliceOfUint64 {
 // Concat concats another slice and adds the items in that to the end of current slice
 func (s *SliceOfUint64) Concat(items []uint64) *SliceOfUint64 {
 	s.items = append(s.items, items...)
+	return s
+}
+
+// Push pushes the uint64 item at the end of the slice
+func (s *SliceOfUint64) Push(item uint64) *SliceOfUint64 {
+	s.items = append(s.items, item)
+	return s
+}
+
+// Pop deletes the uint64 item from the end of the slice
+func (s *SliceOfUint64) Pop() *SliceOfUint64 {
+	s.items = s.items[:len(s.items)-1]
 	return s
 }
 
@@ -1412,18 +1412,6 @@ func (s *SliceOfString) Map(mapFunc func(string) string) *SliceOfString {
 	return s
 }
 
-// Push pushes the string item at the end of the slice
-func (s *SliceOfString) Push(item string) *SliceOfString {
-	s.items = append(s.items, item)
-	return s
-}
-
-// Pop deletes the string item from the end of the slice
-func (s *SliceOfString) Pop() *SliceOfString {
-	s.items = s.items[:len(s.items)-2]
-	return s
-}
-
 // Shift removes first string item from the slice
 func (s *SliceOfString) Shift() *SliceOfString {
 	s.items = s.items[1:]
@@ -1445,6 +1433,18 @@ func (s *SliceOfString) Append(item string) *SliceOfString {
 // Concat concats another slice and adds the items in that to the end of current slice
 func (s *SliceOfString) Concat(items []string) *SliceOfString {
 	s.items = append(s.items, items...)
+	return s
+}
+
+// Push pushes the string item at the end of the slice
+func (s *SliceOfString) Push(item string) *SliceOfString {
+	s.items = append(s.items, item)
+	return s
+}
+
+// Pop deletes the string item from the end of the slice
+func (s *SliceOfString) Pop() *SliceOfString {
+	s.items = s.items[:len(s.items)-1]
 	return s
 }
 
@@ -1518,18 +1518,6 @@ func (s *SliceOfInterface) Map(mapFunc func(interface{}) interface{}) *SliceOfIn
 	return s
 }
 
-// Push pushes the interface{} item at the end of the slice
-func (s *SliceOfInterface) Push(item interface{}) *SliceOfInterface {
-	s.items = append(s.items, item)
-	return s
-}
-
-// Pop deletes the interface{} item from the end of the slice
-func (s *SliceOfInterface) Pop() *SliceOfInterface {
-	s.items = s.items[:len(s.items)-2]
-	return s
-}
-
 // Shift removes first interface{} item from the slice
 func (s *SliceOfInterface) Shift() *SliceOfInterface {
 	s.items = s.items[1:]
@@ -1551,6 +1539,18 @@ func (s *SliceOfInterface) Append(item interface{}) *SliceOfInterface {
 // Concat concats another slice and adds the items in that to the end of current slice
 func (s *SliceOfInterface) Concat(items []interface{}) *SliceOfInterface {
 	s.items = append(s.items, items...)
+	return s
+}
+
+// Push pushes the interface{} item at the end of the slice
+func (s *SliceOfInterface) Push(item interface{}) *SliceOfInterface {
+	s.items = append(s.items, item)
+	return s
+}
+
+// Pop deletes the interface{} item from the end of the slice
+func (s *SliceOfInterface) Pop() *SliceOfInterface {
+	s.items = s.items[:len(s.items)-1]
 	return s
 }
 
